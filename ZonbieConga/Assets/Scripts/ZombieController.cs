@@ -2,6 +2,11 @@
 using System.Collections;
 
 public class ZombieController : MonoBehaviour {
+	[SerializeField]
+	private PolygonCollider2D[] colliders;
+	private int currentColliderIndex = 0;
+
+
 	public float moveSpeed;
 	public float turnSpeed;
 	private Vector3 moveDirection;
@@ -25,5 +30,12 @@ public class ZombieController : MonoBehaviour {
 		transform.rotation = Quaternion.Slerp (transform.rotation, 
 		                                      Quaternion.Euler (0, 0, targetAngle),
 		                                      turnSpeed * Time.deltaTime);
+	}
+
+	public void setColliderForSprite(int spriteNum)
+	{
+		colliders [0].enabled = false;
+		//currentColliderIndex = spriteNum;
+		colliders [currentColliderIndex].enabled = true;
 	}
 }
