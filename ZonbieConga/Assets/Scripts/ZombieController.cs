@@ -32,10 +32,15 @@ public class ZombieController : MonoBehaviour {
 		                                      turnSpeed * Time.deltaTime);
 	}
 
-	public void setColliderForSprite(int spriteNum)
+	void SetColliderForSprite(int spriteNum)
 	{
-		colliders [0].enabled = false;
-		//currentColliderIndex = spriteNum;
+		colliders [currentColliderIndex].enabled = false;
+		currentColliderIndex = spriteNum;
 		colliders [currentColliderIndex].enabled = true;
+	}
+
+	void OnTriggerEnter2D(Collider2D other)
+	{
+		Debug.Log ("Hit " + other.gameObject);
 	}
 }
