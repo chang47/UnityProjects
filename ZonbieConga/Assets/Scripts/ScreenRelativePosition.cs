@@ -21,6 +21,14 @@ public class ScreenRelativePosition : MonoBehaviour {
 				newPosition.y = camera.orthographicSize + yOffset;
 				newPosition.x = xOffset;
 				break;
+			case ScreenEdge.LEFT:
+				newPosition.x = -camera.aspect * camera.orthographicSize + xOffset;
+				newPosition.y = yOffset;
+				break;
+			case ScreenEdge.BOTTOM:
+				newPosition.y = -camera.orthographicSize + yOffset;
+				newPosition.x = xOffset;
+				break;
 		}
 		transform.position = newPosition;
 	}

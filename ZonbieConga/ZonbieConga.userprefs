@@ -1,10 +1,10 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\ScreenRelativePosition.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\ZombieController.cs">
     <Files>
-      <File FileName="..\Zombie Conga\Assets\Scripts\ZombieController.cs" Line="54" Column="20" />
-      <File FileName="Assets\EnemyController.cs" Line="8" Column="44" />
-      <File FileName="Assets\Scripts\ScreenRelativePosition.cs" Line="32" Column="2" />
+      <File FileName="Assets\Scripts\ScreenRelativePosition.cs" Line="29" Column="55" />
+      <File FileName="Assets\Scripts\EnemyController.cs" Line="27" Column="56" />
+      <File FileName="Assets\Scripts\ZombieController.cs" Line="68" Column="34" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
