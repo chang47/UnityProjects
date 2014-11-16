@@ -46,10 +46,12 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\BackgroundController.cs" />
-     <Compile Include="Assets\CameraController.cs" />
+     <Compile Include="Assets\Scripts\BackgroundController.cs" />
+     <Compile Include="Assets\Scripts\BackgroundRepeater.cs" />
+     <Compile Include="Assets\Scripts\CameraController.cs" />
      <Compile Include="Assets\Scripts\CatController.cs" />
      <Compile Include="Assets\Scripts\EnemyController.cs" />
+     <Compile Include="Assets\Scripts\KittyCreator.cs" />
      <Compile Include="Assets\Scripts\ScreenRelativePosition.cs" />
      <Compile Include="Assets\Scripts\ZombieAnimation.cs" />
      <Compile Include="Assets\Scripts\ZombieController.cs" />
