@@ -7,6 +7,8 @@ public class CatController : MonoBehaviour {
 	private float moveSpeed; 
 	private float turnSpeed; 
 	private bool isZombie;
+	
+	private Vector3 targetPosition;
 
 	void GrantCatTheSweetReleaseOfDeath()
 	{
@@ -14,22 +16,25 @@ public class CatController : MonoBehaviour {
 	}
 
 	void OnBecameInvisible() {
-		Destroy( gameObject ); 
+		if(!isZombie) {
+			Destroy( gameObject ); 
+		}
 	}
 
 	public void JoinConga( Transform followTarget, float moveSpeed, float turnSpeed ) {
-		
+		targetPosition = followTarget.position;
 		//2
 		this.followTarget = followTarget;
-		this.moveSpeed = moveSpeed;
+		this.moveSpeed = moveSpeed * 2f;
 		this.turnSpeed = turnSpeed;
 		
 		//3
 		isZombie = true;
 		
 		//4
-		collider2D.enabled = false;
-		GetComponent<Animator>().SetBool( "InConga", true );
+		Transform cat = transform.GetChild (0);
+		cat.collider2D.enabled = false;
+		cat.GetComponent<Animator>().SetBool( "InConga", true );
 	}
 
 	void Update () {
@@ -38,7 +43,7 @@ public class CatController : MonoBehaviour {
 		{
 			//2
 			Vector3 currentPosition = transform.position;            
-			Vector3 moveDirection = followTarget.position - currentPosition;
+			Vector3 moveDirection = targetPosition - currentPosition;
 			
 			//3
 			float targetAngle = 
@@ -62,5 +67,9 @@ public class CatController : MonoBehaviour {
 					Vector3.Lerp(currentPosition, target, moveSpeed * Time.deltaTime);
 			}
 		}
+	}
+
+	public void UpdateTargetPosition() {
+		targetPosition = followTarget.position;
 	}
 }
