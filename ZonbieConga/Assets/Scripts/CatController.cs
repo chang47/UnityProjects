@@ -10,12 +10,12 @@ public class CatController : MonoBehaviour {
 	
 	private Vector3 targetPosition;
 
-	void GrantCatTheSweetReleaseOfDeath()
+	public void GrantCatTheSweetReleaseOfDeath()
 	{
 		DestroyObject( gameObject );
 	}
 
-	void OnBecameInvisible() {
+	public void OnBecameInvisible() {
 		if(!isZombie) {
 			Destroy( gameObject ); 
 		}
@@ -71,5 +71,14 @@ public class CatController : MonoBehaviour {
 
 	public void UpdateTargetPosition() {
 		targetPosition = followTarget.position;
+	}
+
+	public void ExitConga() {
+		Vector3 cameraPos = Camera.main.transform.position;
+		targetPosition = new Vector3 (cameraPos.x + Random.Range (-1.5f, 1.5f),
+		                             cameraPos.y + Random.Range (-1.5f, 1.5f),
+		                             followTarget.position.z);
+		Transform cat = transform.GetChild (0);
+		cat.GetComponent<Animator>().SetBool("InConga", false);
 	}
 }
