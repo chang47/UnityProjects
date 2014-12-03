@@ -1,7 +1,7 @@
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2008
 
-Project("{AB7127C9-FC7A-C7A2-F5A9-905F6E00BF94}") = "ZonbieConga", "Assembly-CSharp-vs.csproj", "{123662C7-1A9E-3575-FB30-C17B4B752A49}"
+Project("{BA79B585-9890-6769-B643-63CB99BE52F4}") = "MagicDash", "Assembly-CSharp.csproj", "{8A69D8E6-3D7A-49BA-79F4-9430FA228D8D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,15 +9,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{123662C7-1A9E-3575-FB30-C17B4B752A49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{123662C7-1A9E-3575-FB30-C17B4B752A49}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{123662C7-1A9E-3575-FB30-C17B4B752A49}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{123662C7-1A9E-3575-FB30-C17B4B752A49}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A69D8E6-3D7A-49BA-79F4-9430FA228D8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A69D8E6-3D7A-49BA-79F4-9430FA228D8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A69D8E6-3D7A-49BA-79F4-9430FA228D8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A69D8E6-3D7A-49BA-79F4-9430FA228D8D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-								GlobalSection(MonoDevelopProperties) = preSolution
+	GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Assembly-CSharp.csproj
 		Policies = $0
 		$0.TextStylePolicy = $1
@@ -35,5 +35,4 @@ Global
 		$3.inheritsScope = text/plain
 		$3.scope = text/plain
 	EndGlobalSection
-
 EndGlobal
